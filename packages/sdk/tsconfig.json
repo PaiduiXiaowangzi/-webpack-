@@ -1,0 +1,13 @@
+{
+    "compilerOptions": {
+        "baseUrl": ".",
+        "composite": true,
+        "paths": {
+            "@sdk/*": ["./src/*"]
+        },
+        "outDir": "./dist",
+        "declaration":true
+    },
+    "include": ["src"],
+    "references":[]
+}
