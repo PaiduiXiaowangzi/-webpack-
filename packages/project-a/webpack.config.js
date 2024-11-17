@@ -1,5 +1,6 @@
 const path = require('path')
 const TypescriptAliasPlugin = require('../../typescript-alias-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 module.exports = {
     mode:'development',
     entry: './src/index.ts',
@@ -16,13 +17,16 @@ module.exports = {
     module: {
         rules: [
             {
-                test:/\.$/,
+                test:/\.ts$/,
                 use: 'ts-loader',
                 exclude: /node_modules/,
             }
         ]
     },
     plugins: [
-        new TypescriptAliasPlugin(path.resolve(__dirname, '../sdk/tsconfig.json'))
+        new TypescriptAliasPlugin(path.resolve(__dirname, './tsconfig.json')),
+        new HtmlWebpackPlugin({
+            template: './src/index.html', // 指定模板路径
+        }),
     ]
 }

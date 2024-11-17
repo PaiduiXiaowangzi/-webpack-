@@ -4,15 +4,20 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "webpack serve --config ./webpack.config.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "typescript": "^5.6.3"
+    "tsconfig-paths-webpack-plugin": "^4.2.0",
+    "typescript": "^5.6.3",
+    "webpack-dev-server": "^5.1.0"
   },
   "dependencies": {
+    "html-webpack-plugin": "^5.6.3",
+    "sdk": "^0.5.0",
     "webpack": "^5.96.1"
   }
 }
